@@ -1,0 +1,12 @@
+.jumbotron
+  %h1.text-center 
+    Welcome to FaceCode 
+    %br/ 
+  %p.text-center A website for online interview and collaborite coding. 
+  <br>
+  %center.form-group
+    <b>Input room name:</b>
+    = text_field_tag "room[name]", nil, palceholder: "Enter your room name"
+    = link_to "Get Started", "#", class: 'btn btn-success btn-large', role: 'button', id: "btn-room"
+
+%script{src: '/javascripts/index/index.js'}

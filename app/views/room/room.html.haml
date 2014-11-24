@@ -1,0 +1,35 @@
+.jumbotron
+  .row
+    .col-md-6#video_mod
+      .row.gridly
+        #video-grid
+          .col-xs-12.col-md-12
+            %video#remoteVideo{ "autoplay" => "",}
+          .col-md-2.col-xs-2
+            %video#localVideo{  "autoplay" => "", "muted" => "" }
+      .row.gridly
+        .panel.panel-primary
+          .panel-heading
+            Chat
+          .panel-body#js-chat-body
+        %br
+        .input-group
+          %input.form-control#js-input-im{ type: 'text', placeholder: 'Send a Message'}
+          %span.input-group-btn
+            %button.btn.btn-primary#js-send-button-im{ type: "button"}
+              Send
+
+    .col-md-6#editor_mod
+      .container
+        #editor Connecting...Please wait
+
+%script{src: '/javascripts/rtc/client_signaling.js'}
+%script{src: '/javascripts/chat/chat.js'}
+%script{src: '/javascripts/editor/ace/ace-uncompressed.js'}
+%script{src: '/javascripts/editor/ace/mode-python.js'}
+%script{src: '/javascripts/editor/ace/mode-c_cpp.js'}
+%script{src: '/javascripts/editor/ace/theme-monokai.js'}
+%script{src: '/javascripts/editor/channel/bcsocket.js'}
+%script{src: '/javascripts/editor/share/share.uncompressed.js'}
+%script{src: '/javascripts/editor/share/ace.js'}
+%script{src: '/javascripts/editor/editor.js'}

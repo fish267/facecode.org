@@ -1,0 +1,12 @@
+%header
+  %nav.navbar.navbar-default{role: 'navigation'}
+    .nacbar-header#header_mod
+      = link_to "FaceCode", :root, class: 'navbar-brand'
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %button.btn.btn-info{:onclick=>"show_editor()"}  Editor
+        %li
+          %button.btn.btn-info{:onclick=>"show_video()"}  Video
+        %li
+          %button.btn.btn-info{:onclick=>"show_all()"}  Normal 
